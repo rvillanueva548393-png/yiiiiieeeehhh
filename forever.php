@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forever</title>
+    <title>Happy Birthday!</title>
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { margin: 0; background: #000; overflow: hidden; color: white; font-family: 'Nunito', sans-serif; }
@@ -15,17 +15,17 @@
             background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px);
             padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);
         }
-        h1 { font-family: 'Sacramento', cursive; font-size: 4rem; color: #ff4d88; margin: 0; text-shadow: 0 0 20px #ff4d88; }
+        h1 { font-family: 'Sacramento', cursive; font-size: 4rem; color: #ffdf00; margin: 0; text-shadow: 0 0 20px #ffdf00; }
         p { font-size: 1.2rem; line-height: 1.6; margin: 20px 0; color: #f1f2f6; }
         
         button {
-            padding: 15px 40px; background: #ff4d88; color: white; border: none;
+            padding: 15px 40px; background: #e17055; color: white; border: none;
             border-radius: 50px; font-size: 1.2rem; cursor: pointer;
-            box-shadow: 0 0 20px rgba(255, 77, 136, 0.5); animation: pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(225, 112, 85, 0.5); animation: pulse 2s infinite;
         }
-        @keyframes pulse { 0% {box-shadow: 0 0 0 0 rgba(255, 77, 136, 0.7);} 70% {box-shadow: 0 0 0 20px rgba(255, 77, 136, 0);} 100% {box-shadow: 0 0 0 0 rgba(255, 77, 136, 0);} }
+        @keyframes pulse { 0% {box-shadow: 0 0 0 0 rgba(225, 112, 85, 0.7);} 70% {box-shadow: 0 0 0 20px rgba(225, 112, 85, 0);} 100% {box-shadow: 0 0 0 0 rgba(225, 112, 85, 0);} }
         
-        .final-msg { display: none; font-size: 2rem; color: #fff; text-shadow: 0 0 10px #ff4d88; text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 20; width: 100%;}
+        .final-msg { display: none; font-size: 2rem; color: #fff; text-shadow: 0 0 10px #e17055; text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 20; width: 100%;}
     </style>
 </head>
 <body>
@@ -33,21 +33,21 @@
 <canvas id="canvas"></canvas>
 
 <div class="content" id="card">
-    <h1>It's Always You</h1>
+    <h1>Happy Birthday, Ate! 🎂</h1>
     <p>
-        I'm sorry for the mistakes, but I'm never sorry for loving you.<br>
-        You are my Kamatis, my best friend, and my favorite person.<br>
-        Let's leave the bad days behind and start fresh?
+        Wishing you the absolute best year ahead!<br>
+        Stay healthy, stay happy, and keep being the awesome sister you are.<br>
+        Now, where's the food? Let's celebrate!
+        Akoa nanang iphone 🎉
     </p>
-    <button onclick="accept()">Let's Date Again? 💖</button>
+    <button onclick="accept()">Blow the candles! 🎈</button>
 </div>
 
 <div class="final-msg" id="final">
-    <h1>Thank you, Kamatis! <br> I love you! ❤️</h1>
+    <h1>Happy Birthday! <br> Enjoy your special day! 🥳🎁</h1>
 </div>
 
 <script>
-    // Simple Firework Logic
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
@@ -68,7 +68,7 @@
     }
 
     function createFirework(x, y) {
-        const colors = ['#ff4d88', '#fffa65', '#65ff96', '#65d5ff', '#ffffff'];
+        const colors = ['#e17055', '#fdcb6e', '#00b894', '#0984e3', '#6c5ce7'];
         for (let i = 0; i < 30; i++) {
             particles.push({
                 x: x, y: y,

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Kamatis ❤️</title>
+    <title>Happy Birthday Ate! 🎉</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 
@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             /* Soft, dreamy gradient */
-            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -33,11 +33,11 @@
             border-radius: 30px;
             cursor: pointer;
             font-weight: bold;
-            color: #ff4757;
+            color: #0984e3;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             z-index: 1000;
             transition: 0.3s;
-            border: 2px solid #ff4757;
+            border: 2px solid #0984e3;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -56,7 +56,7 @@
         .envelope {
             width: 300px;
             height: 200px;
-            background: #ff4757;
+            background: #0984e3;
             position: relative;
             border-radius: 0 0 10px 10px;
             box-shadow: 0 15px 25px rgba(0,0,0,0.2);
@@ -75,7 +75,7 @@
             height: 0;
             border-left: 150px solid transparent;
             border-right: 150px solid transparent;
-            border-top: 110px solid #ff6b81; /* Lighter red */
+            border-top: 110px solid #74b9ff; 
             transform-origin: top;
             transition: 0.6s;
             z-index: 30;
@@ -93,8 +93,8 @@
             left: 0;
             width: 0;
             height: 0;
-            border-left: 150px solid #e84118;
-            border-right: 150px solid #c23616;
+            border-left: 150px solid #005f73;
+            border-right: 150px solid #0a3d62;
             border-top: 100px solid transparent;
             border-radius: 0 0 10px 10px;
             z-index: 25;
@@ -113,11 +113,11 @@
         .envelope.open .heart-seal { opacity: 0; }
 
         .click-text {
-            color: white;
+            color: #333;
             margin-top: 30px;
             font-weight: bold;
             font-size: 1.2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
             text-align: center;
         }
 
@@ -146,7 +146,7 @@
         
         h1 {
             font-family: 'Sacramento', cursive;
-            color: #d63384;
+            color: #0984e3;
             font-size: 2.8rem;
             margin: 0 0 10px 0;
         }
@@ -161,16 +161,16 @@
         button {
             padding: 12px 30px;
             border: none;
-            background: #ff4d88;
+            background: #0984e3;
             color: white;
             border-radius: 50px;
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 77, 136, 0.3);
+            box-shadow: 0 5px 15px rgba(9, 132, 227, 0.3);
         }
-        button:hover { background: #e6005c; transform: scale(1.05); }
+        button:hover { background: #74b9ff; transform: scale(1.05); }
 
     </style>
 </head>
@@ -181,75 +181,68 @@
     </audio>
 
     <div class="music-control" onclick="toggleMusic()">
-        🎵 Play Song
+        🎵 Play Music
     </div>
 
     <div class="envelope-wrapper" id="envelopeWrapper" onclick="openLetter()">
         <div class="envelope" id="envelope">
             <div class="flap"></div>
             <div class="pocket"></div>
-            <div class="heart-seal">💌</div>
+            <div class="heart-seal">🎂</div>
         </div>
-        <div class="click-text">For my Kamatis... <br>(Tap to Open)</div>
+        <div class="click-text">For my favorite Ate... <br>(Tap to Open)</div>
     </div>
 
     <div class="card" id="mainCard">
-        <h1>I Miss You</h1>
+        <h1>Happy Birthday!</h1>
         <p>
-            Hi Kamatis,<br><br>
-            I know things haven't been perfect lately, but my world is incomplete without you.<br>
-            I made this because I wanted to remind you of "Us".<br><br>
-            Can I steal a moment of your time?
+            Hi Ate,<br><br>
+            Another year older, another year wiser (hopefully)! 😂<br>
+            I may not say it often, but thank you for being the best sister.<br><br>
+            I made this little surprise just for you! Ready?
         </p>
-        <a href="question.php"><button>Okay... 💖</button></a>
+        <a href="question.php"><button>Let's go! 🎁</button></a>
     </div>
 
     <script>
         function openLetter() {
-            // 1. Attempt to play music automatically
             var music = document.getElementById('bgMusic');
             var btn = document.querySelector('.music-control');
             
-            // Try playing
             var playPromise = music.play();
             
             if (playPromise !== undefined) {
                 playPromise.then(_ => {
-                    // Success
                     music.volume = 0.5;
-                    btn.innerHTML = "⏸️ Pause Song";
+                    btn.innerHTML = "⏸️ Pause Music";
                 })
                 .catch(error => {
-                    // Auto-play was blocked
                     console.log("Auto-play blocked. User must click the music button.");
                 });
             }
 
-            // 2. Animate the envelope
             const envelope = document.getElementById('envelope');
             const wrapper = document.getElementById('envelopeWrapper');
             const card = document.getElementById('mainCard');
             
             envelope.classList.add('open');
             
-            // Wait for flap animation, then hide envelope and show letter
             setTimeout(() => {
                 wrapper.style.display = 'none';
                 card.classList.add('pop-up');
             }, 800);
         }
 
-        // The Manual Music Toggle Function
         function toggleMusic() {
             var music = document.getElementById('bgMusic');
             var btn = document.querySelector('.music-control');
             
             if (music.paused) {
                 music.play();
-                btn.innerHTML = "⏸️ Pause Song";
+                btn.innerHTML = "⏸️ Pause Music";
             } else {
                 music.pause();
-                btn.innerHTML = "🎵 Play Song";
+                btn.innerHTML = "🎵 Play Music";
             }
         }
     </script>

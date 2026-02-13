@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Memories</title>
+    <title>Sister Memories</title>
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             background: #ffeaa7;
             font-family: 'Nunito', sans-serif;
             min-height: 100vh; padding: 40px 0;
-            background-image: radial-gradient(#ff7675 1px, transparent 1px);
+            background-image: radial-gradient(#fdcb6e 1px, transparent 1px);
             background-size: 20px 20px;
         }
         h1 {
             text-align: center; font-family: 'Sacramento', cursive;
-            font-size: 3.5rem; color: #d63031; margin-bottom: 40px;
+            font-size: 4rem; color: #d63031; margin-bottom: 40px;
             text-shadow: 2px 2px 0px rgba(255,255,255,0.5);
         }
         .gallery {
@@ -42,11 +42,11 @@
         }
         .next-btn {
             display: block; margin: 50px auto; padding: 15px 50px;
-            background: #d63031; color: white; font-size: 1.2rem; border: none;
-            border-radius: 30px; cursor: pointer; box-shadow: 0 5px 15px rgba(214, 48, 49, 0.4);
+            background: #e17055; color: white; font-size: 1.2rem; border: none;
+            border-radius: 30px; cursor: pointer; box-shadow: 0 5px 15px rgba(225, 112, 85, 0.4);
             transition: 0.3s;
         }
-        .next-btn:hover { transform: scale(1.05); background: #b71540; }
+        .next-btn:hover { transform: scale(1.05); background: #d63031; }
         
         /* Overlay */
         .overlay {
@@ -63,37 +63,37 @@
 </head>
 <body>
 
-    <h1>Why I Love You</h1>
+    <h1>Best Sister Ever</h1>
 
     <div class="gallery">
-        <div class="polaroid" onclick="show(this, 'I miss this smile. It lights up my world.')">
-            <img src="pic1.jpeg" alt="Memory">
-            <div class="caption">Your Smile</div>
+        <div class="polaroid" onclick="show(this, 'Throwback to this fun day!')">
+            <img src="pic1.jpg" alt="Memory">
+            <div class="caption">Good Times</div>
         </div>
         
-        <div class="polaroid" onclick="show(this, 'Remember this day? I was so happy.')">
+        <div class="polaroid" onclick="show(this, 'You looking older every year! Jk 😂')">
             <img src="pic2.jpg" alt="Memory">
-            <div class="caption">Best Day</div>
+            <div class="caption">Getting Old</div>
         </div>
         
-        <div class="polaroid" onclick="show(this, 'Even when we fight, you are beautiful.')">
+        <div class="polaroid" onclick="show(this, 'Always stealing...')">
             <img src="pic3.jpg" alt="Memory">
-            <div class="caption">Kamatis</div>
+            <div class="caption">The Thief</div>
         </div>
 
-        <div class="polaroid" onclick="show(this, 'I want a thousand more adventures with you.')">
-            <img src="pic4.jpg" alt="Memory">
-            <div class="caption">Adventure</div>
+        <div class="polaroid" onclick="show(this, 'But seriously, thank you for always being there for me.')">
+            <img src="pic4.jfif" alt="Memory">
+            <div class="caption">Support System</div>
         </div>
 
-        <div class="polaroid" onclick="show(this, 'You are my safe place.')">
+        <div class="polaroid" onclick="show(this, 'Love you, Ate! Have the best birthday today!')">
             <img src="pic5.jfif" alt="Memory">
-            <div class="caption">Home</div>
+            <div class="caption">Happy Bday!</div>
         </div>
     </div>
 
     <button class="next-btn" onclick="location.href='forever.php'">
-        One Last Thing... 👉
+        One Last Surprise... 👉
     </button>
 
     <div class="overlay" id="overlay" onclick="this.style.display='none'">
